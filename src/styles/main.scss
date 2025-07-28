@@ -1,0 +1,59 @@
+@use 'variables' as *;
+@use 'function' as *;
+@use 'mixin' as *;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+#root {
+    margin: 0;
+    padding: 0;`
+  }
+
+
+body {
+  font-family: $font-primary;
+  background-color: $primary-color; 
+  height: 100vh;
+  overflow: hidden; 
+}
+
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: transparent;
+    border-bottom:1px solid black;
+    @include flex-align();
+    .logo{
+        height: px-to-rem(130);
+        padding-left: px-to-rem(10);
+    }  
+}
+
+.box-global {
+    @include flex-align();
+    
+    .img-right{
+        align-self: flex-start;
+        width: auto;
+        height: 65vh;
+        margin-bottom: -22px;
+        display: block;
+        margin-left: auto;
+        
+    }
+    .img-left{
+        align-self: flex-start;
+        width: auto;
+        height: 65vh;
+        margin-bottom: -22px;
+        display: block;
+        
+    }
+
+}
+footer{
+    background-color: $secondary-color;
+    width: 100vw;
+    height: 20vh;
+}
+
+
