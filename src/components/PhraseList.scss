@@ -1,0 +1,16 @@
+@use "/src/styles/variables.scss" as *;
+@use "/src/styles/function.scss" as *;
+
+.phrase-card {
+    width: 50vw;
+    height: 20vh;
+    padding: px-to-rem(20);
+    background-color: $card-color;
+    border-radius: px-to-rem(20);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-style: $font-primary;
+    .phrase-text,.phrase-author  {
+        padding-left: px-to-rem(20);
+    }
+}
+

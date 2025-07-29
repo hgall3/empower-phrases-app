@@ -1,3 +1,6 @@
+import "./PhraseList.scss"
+
+
 function PhraseList({ phrases }) {
     return (
       <div className="phrase-list">
@@ -7,7 +10,7 @@ function PhraseList({ phrases }) {
           phrases.map((phrase) => (
             <div key={phrase.id} className='phrase-card'>
               <p className='phrase-text'>"{phrase.text}"</p>
-              <p className='phrase-author'>— {phrase.author || "Anonymous"}</p>
+              <p className='  '>— {phrase.author || "Anonymous"}</p>
             </div>
           ))
         )}
