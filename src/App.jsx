@@ -1,24 +1,29 @@
 import { useState } from 'react'
 import './styles/main.scss'
+import PhraseList from './components/PhraseList'
+import { initialPhrases } from './assets/data/data.js'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [phrases, setPhrases] = useState(initialPhrases)
 
   return (
     <>
-     <body>
+     <div className='app-wrapper'>
       <header>
       <img className='logo' src="src/assets/logo.png" alt="logo-garden-of-thoughts" />
       </header>
-      <section className='box-global'>
+      <main className='box-global'>
         <img className='img-left' src="src/assets/flowers_right.png" alt="flowers-background-with-moth" />
+        <div className="phrases-container">
+          <PhraseList phrases={phrases} />
+        </div>
         <img className='img-right' src="src/assets/flowers_left.png" alt="flowers-background" />
-       </section>
+       </main>
        <footer>
         <h1>.</h1>
        </footer>
-    </body>
+    </div>
     </>
   )
 }
