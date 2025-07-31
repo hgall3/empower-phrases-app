@@ -29,8 +29,8 @@ function AddPhraseForm({onAdd}) {
             onChange={(e) => setAuthor (e.target.value)}
             placeholder="Author (opcional)" 
             />
-            <button type="submit"Add Phrase></button>
-            </form>
+            <button type="submit">Add Phrase</button>
+        </form>
     );
 
 }
