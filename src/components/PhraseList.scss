@@ -1,0 +1,48 @@
+@use "/src/styles/variables.scss" as *;
+@use "/src/styles/function.scss" as *;
+
+
+.phrase-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.phrase-card {
+  background-color: $card-color;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align:start;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.phrase-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: $font-color;
+  font-family: $font-primary;
+}
+
+.phrase-card p:last-child {
+  font-size: 1rem;
+  color: $secondary-color;
+  margin: 0;
+  font-family: $font-primary;
+}
+
+.empty-message {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: $font-primary;
+}
+
+
