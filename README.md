@@ -6,11 +6,11 @@ A simple and dynamic web application that allows users to create, read, update, 
 
 ## 👥 Team Members
 
-- Montserrat Muñoz
-- Paola Pulga
-- Daniela Pacheco dos Santos
-- Gabriela Gallegos 
-- Erika P. Montoya
+- [Montserrat Muñoz](https://github.com/Montc027)
+- [Paola Pulga](https://github.com/Pao-Pul)
+- [Daniela Pacheco dos Santos](https://github.com/DaniPacheco8)
+- [Gabriela Gallegos](https://github.com/hgall3)
+- [Erika P. Montoya](https://github.com/DevErika)
 
 ---
 
@@ -52,7 +52,6 @@ The app allows users to:
 - ✅ Allow deleting any phrase and its author.
 - ✅ Allow users to input a new phrase with an author.
 
-
 ---
 
 ## 📋 Non-Functional Requirements
@@ -60,7 +59,6 @@ The app allows users to:
 - Each phrase **must** include the text and the author's name.
 - If the author is unknown, display as **Anonymous**.
 - The app must be **responsive** across devices (mobile-first).
-
 
 ---
 
@@ -80,3 +78,23 @@ We use **Agile** principles with Trello boards for task tracking, daily follow-u
 
 ## 🔧 Atomic Design Structure
 
+The design was created in Figma following the **Atomic Design** methodology. All components are modular, reusable, and responsive, making the interface scalable and easy to maintain.
+
+---
+
+## 🧾 Getting Started
+
+Follow these steps to clone and run the project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/tu-usuario/empowering-phrases-app.git
+
+# 2. Navigate into the project folder
+cd empowering-phrases-app
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
