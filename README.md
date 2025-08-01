@@ -8,7 +8,7 @@ A simple and dynamic web application that allows users to create, read, update, 
 
 - [Montserrat Muñoz](https://github.com/Montc027)
 - [Paola Pulga](https://github.com/Pao-Pul)
-- [Daniela Pacheco dos Santos](https://github.com/DaniPacheco8)
+- [Daniella Pacheco](https://github.com/DaniPacheco8)
 - [Gabriela Gallegos](https://github.com/hgall3)
 - [Erika P. Montoya](https://github.com/DevErika)
 
