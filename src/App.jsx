@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './styles/main.scss'
-import PhraseList from './components/PhraseList'
-import AddPhraseForm from './components/AddPhraseForm.jsx'
+import PhraseList from './components/phraseList/PhraseList.jsx'
+import AddPhraseForm from './components/addPhrase/AddPhraseForm.jsx'
 import { initialPhrases } from './assets/data/data.js'
 
 
