@@ -57,49 +57,9 @@
   font-family: $font-primary;
 }
 
-.phrase-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 0.5rem;
-
-  button {
-    border: 1px solid $font-color;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    background-color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s;
-
-    img {
-      width: 18px;
-      height: 18px;
-    }
-
-    &:hover {
-      background-color: $primary-color;
-    }
-
-    &:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-  }
-}
-
 .empty-message {
   font-size: 1.2rem;
   font-style: italic;
   font-family: $font-primary;
   color: $secondary-color;
-}
-
-.save-button {
-  font-family: 'Playfair Display', monospace; 
-  font-size: 0.8rem; 
-  font-weight: 600;  
 }
