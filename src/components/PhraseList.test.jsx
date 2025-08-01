@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import PhraseList from './PhraseList';
+import PhraseList from './phraseList/PhraseList';
 
 
 describe('PhraseList component', () => {
