@@ -1,4 +1,4 @@
-import "./PhraseList.scss"
+import "../phraseList/PhraseList.scss"
 import DeletePhrase from "../deletePhrase/DeletePhrase.jsx"
 
 function PhraseList({ phrases, onDeletePhrase }) {
