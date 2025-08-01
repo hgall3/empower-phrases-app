@@ -1,6 +1,7 @@
 import "./PhraseList.scss"
 
 
+
 function PhraseList({ phrases }) {
     return (
       <div className="phrase-list">
