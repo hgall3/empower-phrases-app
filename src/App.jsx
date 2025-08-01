@@ -32,7 +32,6 @@ function App() {
 
         <div className="phrases-container">
           <AddPhraseForm onAdd={handleAddPhrase} />
-          <PhraseList phrases={phrases} setPhrases={setPhrases} />
           <Edit phrases={phrases} setPhrases={setPhrases} />
         </div>
 

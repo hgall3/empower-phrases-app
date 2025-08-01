@@ -1,6 +1,7 @@
 @use "/src/styles/variables.scss" as *;
 @use "/src/styles/function.scss" as *;
 
+
 .phrase-list {
   display: flex;
   flex-direction: column;
@@ -10,47 +11,29 @@
 }
 
 .phrase-card {
+  position: relative;
   background-color: $card-color;
   padding: 2rem;
-  border-radius: 2rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 650px;
-  text-align: start;
-  position: relative;
+  max-width: 600px;
+  text-align:start;
   transition: transform 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
   }
-
-  input {
-    width: 100%;
-    padding: 0.8rem 0.1rem;
-    border: 1px solid $accent_brown;
-    border-radius: 0.75rem;
-    font-family: $font-primary;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    background-color: white;
-    color: $font-color;
-
-    &:read-only {
-      background-color: transparent;
-      border: none;
-      padding-left: 0;
-    }
-  }
 }
 
 .phrase-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   color: $font-color;
   font-family: $font-primary;
 }
 
-.phrase-author {
+.phrase-card p:last-child {
   font-size: 1rem;
   color: $secondary-color;
   margin: 0;
@@ -61,5 +44,4 @@
   font-size: 1.2rem;
   font-style: italic;
   font-family: $font-primary;
-  color: $secondary-color;
 }
