@@ -1,5 +1,5 @@
 import "./DeletePhrase.scss";
-import trashIcon from "../../assets/trash2.svg";
+import trashIcon from "../../assets/trash.svg";
 
 function DeletePhrase({ id, onDelete }) {
   const handleDelete = () => {
