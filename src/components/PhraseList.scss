@@ -1,7 +1,6 @@
 @use "/src/styles/variables.scss" as *;
 @use "/src/styles/function.scss" as *;
 
-
 .phrase-list {
   display: flex;
   flex-direction: column;
@@ -13,36 +12,94 @@
 .phrase-card {
   background-color: $card-color;
   padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 600px;
-  text-align:start;
+  max-width: 650px;
+  text-align: start;
+  position: relative;
   transition: transform 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
   }
+
+  input {
+    width: 100%;
+    padding: 0.8rem 0.1rem;
+    border: 1px solid $accent_brown;
+    border-radius: 0.75rem;
+    font-family: $font-primary;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    color: $font-color;
+
+    &:read-only {
+      background-color: transparent;
+      border: none;
+      padding-left: 0;
+    }
+  }
 }
 
 .phrase-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   color: $font-color;
   font-family: $font-primary;
 }
 
-.phrase-card p:last-child {
+.phrase-author {
   font-size: 1rem;
   color: $secondary-color;
   margin: 0;
   font-family: $font-primary;
 }
 
+.phrase-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.5rem;
+
+  button {
+    border: 1px solid $font-color;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+}
+
 .empty-message {
   font-size: 1.2rem;
   font-style: italic;
   font-family: $font-primary;
+  color: $secondary-color;
 }
 
-
+.save-button {
+  font-family: 'Playfair Display', monospace; 
+  font-size: 0.8rem; 
+  font-weight: 600;  
+}

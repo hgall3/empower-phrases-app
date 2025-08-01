@@ -6,6 +6,7 @@ import { initialPhrases } from './assets/data/data.js'
 
 
 
+
 function App() {
   const [phrases, setPhrases] = useState(initialPhrases)
 
@@ -23,7 +24,7 @@ function App() {
         <img className='img-left' src="src/assets/flowers_right.png" alt="flowers background with moth" />
         <div className="phrases-container">
           <AddPhraseForm onAdd={handleAddPhrase} />
-          <PhraseList phrases={phrases} />
+          <PhraseList phrases={phrases} setPhrases={setPhrases} />
         </div>
         <img className='img-right' src="src/assets/flowers_left.png" alt="flowers background" />
        </main>
