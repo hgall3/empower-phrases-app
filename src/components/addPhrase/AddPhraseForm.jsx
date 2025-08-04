@@ -16,7 +16,7 @@ function AddPhraseForm({onAdd}) {
 
     return (
         <form className="add-phrase-form" onSubmit={handleSubmit}>
-            <h2>Inspiration Quotes</h2>
+            {/* <h2>Inspiration Quotes</h2> */}
             <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
