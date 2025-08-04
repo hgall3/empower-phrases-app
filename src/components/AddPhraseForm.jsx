@@ -17,20 +17,28 @@ function AddPhraseForm({onAdd}) {
     return (
         <form className="add-phrase-form" onSubmit={handleSubmit}>
             <h2>Inspiration Quotes</h2>
+
+            <label htmlFor="phrase-input">Your phrase:</label>
             <textarea
+            id="phrase-input"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Write your pharse..."
             rows={3}
             required
             />
-            <input type="text"
+
+            <label htmlFor="author-input">Author (opcional): </label>
+            <input 
+            id="author-input"
+            type="text"
             value={author}
             onChange={(e) => setAuthor (e.target.value)}
             placeholder="Author (opcional)" 
             />
-            <button type="submit"Add Phrase></button>
-            </form>
+
+            <button type="submit">Add Phrase</button> 
+        </form>
     );
 
 }
