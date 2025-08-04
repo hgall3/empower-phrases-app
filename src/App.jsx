@@ -7,8 +7,7 @@ import { initialPhrases } from './assets/data/data.js'
 
 
 function App() {
-  const [phrases, setPhrases] = useState(initialPhrases)
-
+  const [phrases, setPhrases] = useState(initialPhrases);
   const handleAddPhrase = (newPhrase) => {
     setPhrases(prev => [...prev, newPhrase]);
   };
