@@ -24,7 +24,7 @@ header{
     background-color: transparent;
     @include flex-align();
     .logo{
-        height: px-to-rem(130);
+        height: px-to-rem(110);
         padding-left: px-to-rem(10);
     }  
 };

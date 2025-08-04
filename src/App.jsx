@@ -22,7 +22,7 @@ const handleDeletePhrase = (id) => {
     <>
      <div className='app-wrapper'>
       <header>
-      <img className='logo' src="src/assets/logo.png" alt="logo garden of thoughts" />
+      <img className='logo' src="src/assets/logoGT.png" alt="logo garden of thoughts" />
       </header>
       <main className='box-global'>
         <img className='img-left' src="src/assets/flowers_right.png" alt="flowers background with moth" />
