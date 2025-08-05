@@ -3,7 +3,7 @@ import "../phraseList/PhraseList.scss";
 import DeletePhrase from "../deletePhrase/DeletePhrase.jsx";
 import EditPhrase from "../editPhrase/EditPhrase.jsx";
 import editIcon from "../../assets/edit.svg";
-import AddImageToCard from "../addImageToQuote/AddImageToCard.jsx"; //Agregado para ingresar URL ima.
+import AddImageToCard from "./addImageToQuote/AddImageToCard.jsx"; //Agregado para ingresar URL ima.
 
 
 function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
