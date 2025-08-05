@@ -30,6 +30,11 @@ function App() {
     <div className="app-wrapper">
       <header>
         <img className="logo" src={logo} alt="logo garden of thoughts" />
+        <div className='welcome'>
+        <h1> Welcome To The Garden Of Thoughts!</h1>
+        <p className='welcometext'> Take a moment to explore inspiring quotes, edit your favorties, or add your own words of wisdom. <br />let your thoughts bloom here!</p>
+      </div>
+      <button> Add New Phrase</button>
       </header>
 
       <main className="box-global">
