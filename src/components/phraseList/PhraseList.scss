@@ -1,7 +1,6 @@
 @use "/src/styles/variables.scss" as *;
 @use "/src/styles/function.scss" as *;
 
-
 .phrase-list {
   display: flex;
   flex-direction: column;
@@ -18,11 +17,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px;
-  text-align:start;
+  text-align: start;
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
 }
 
@@ -33,17 +32,48 @@
   font-family: $font-primary;
 }
 
-.phrase-card p:last-child {
+.phrase-author {
   font-size: 1rem;
   color: $secondary-color;
   margin: 0;
   font-family: $font-primary;
 }
 
+.actions {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: flex-end; 
+  gap: 0.5rem;           
+  margin-top: 1rem;
+
+  button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+
+      img {
+        filter: none;
+      }
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+
+
 .empty-message {
   font-size: 1.2rem;
   font-style: italic;
   font-family: $font-primary;
 }
-
-
