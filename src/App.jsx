@@ -1,24 +1,29 @@
 import { useState } from 'react'
 import AddPhraseForm from './components/addPhrase/AddPhraseForm'
 import PhraseList from './components/phraseList/PhraseList'
-import Edit from './components/editPhrase/EditPhrase.jsx'
 import './styles/main.scss'
 
 import logo from './assets/logo.png'
 import flowersRight from './assets/flowers_right.png'
 import flowersLeft from './assets/flowers_left.png'
 
-// Si tienes frases iniciales, defínelas aquí
-const initialPhrases = [
-  { id: 1, text: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
-  { id: 2, text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },
-]
+import { initialPhrases } from "./assets/data/data.js";
 
 function App() {
   const [phrases, setPhrases] = useState(initialPhrases)
 
   const handleAddPhrase = (newPhrase) => {
     setPhrases(prev => [...prev, newPhrase])
+  }
+
+  const handleDeletePhrase = (id) => {
+    setPhrases(prev => prev.filter(phrase => phrase.id !== id))
+  }
+
+  const handleEditPhrase = (updatedPhrase) => {
+    setPhrases(prev =>
+      prev.map(phrase => phrase.id === updatedPhrase.id ? updatedPhrase : phrase)
+    )
   }
 
   return (
@@ -32,7 +37,11 @@ function App() {
 
         <div className="phrases-container">
           <AddPhraseForm onAdd={handleAddPhrase} />
-          <Edit phrases={phrases} setPhrases={setPhrases} />
+          <PhraseList
+            phrases={phrases}
+            onDeletePhrase={handleDeletePhrase}
+            onEditPhrase={handleEditPhrase}
+          />
         </div>
 
         <img className="img-right" src={flowersLeft} alt="flowers background" />
