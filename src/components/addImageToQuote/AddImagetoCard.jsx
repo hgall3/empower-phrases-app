@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./AddImageQuote.scss";
+import "./AddImageToCard.scss";
+
 
 function AddImageToCard({ phrase, onSaveImage }) {
   const [showInput, setShowInput] = useState(false);
