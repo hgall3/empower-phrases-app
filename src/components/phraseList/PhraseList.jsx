@@ -3,6 +3,8 @@ import "../phraseList/PhraseList.scss";
 import DeletePhrase from "../deletePhrase/DeletePhrase.jsx";
 import EditPhrase from "../editPhrase/EditPhrase.jsx";
 import editIcon from "../../assets/edit.svg";
+import AddImageToCard from "../addImageToQuote/AddImageToCard.jsx"; //Agregado para ingresar URL ima.
+
 
 function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
   const [editingId, setEditingId] = useState(null);
@@ -37,6 +39,16 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
               <>
                 <p className="phrase-text">"{phrase.text}"</p>
                 <p className="phrase-author">— {phrase.author || "Anonymous"}</p>
+                  {phrase.image && ( 
+                    <img
+                      src={phrase.image}
+                      alt="user submitted"
+                      className="phrase-image"
+                      style={{ maxWidth: "100%", marginTop: "1rem", borderRadius: "10px" }}
+                    />
+                  )}
+                  <AddImageToCard phrase={phrase} onSaveImage={onEditPhrase} />
+
                 <div className="actions">
 
                   <button
