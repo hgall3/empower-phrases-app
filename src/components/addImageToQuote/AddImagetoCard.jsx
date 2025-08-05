@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./AddImageToCard.scss";
 
-
 function AddImageToCard({ phrase, onSaveImage }) {
   const [showInput, setShowInput] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
@@ -25,10 +24,12 @@ function AddImageToCard({ phrase, onSaveImage }) {
             type="text"
             value={imageUrl}
             onChange={(e) => setImageUrl(e.target.value)}
-            placeholder="Paste image URL here..."
+            placeholder="Add an image to your Quote from an URL (optional)"
             className="image-input"
           />
-          <button onClick={handleSave} className="save-image-btn">Save image</button>
+          <button onClick={handleSave} className="save-image-btn">
+            Save image
+          </button>
         </>
       )}
     </div>

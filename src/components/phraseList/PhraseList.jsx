@@ -39,14 +39,15 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
               <>
                 <p className="phrase-text">"{phrase.text}"</p>
                 <p className="phrase-author">— {phrase.author || "Anonymous"}</p>
-                  {phrase.image && ( 
+                  {phrase.image && (
                     <img
                       src={phrase.image}
                       alt="user submitted"
                       className="phrase-image"
-                      style={{ maxWidth: "100%", marginTop: "1rem", borderRadius: "10px" }}
+                      style={{ maxWidth: "100%", borderRadius: "10px", marginTop: "1rem" }}
                     />
-                  )}
+                    )}
+
                   <AddImageToCard phrase={phrase} onSaveImage={onEditPhrase} />
 
                 <div className="actions">
