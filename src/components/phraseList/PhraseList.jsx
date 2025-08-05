@@ -3,7 +3,7 @@ import "../phraseList/PhraseList.scss";
 import DeletePhrase from "../deletePhrase/DeletePhrase.jsx";
 import EditPhrase from "../editPhrase/EditPhrase.jsx";
 import editIcon from "../../assets/edit.svg";
-import AddImageToCard from "../addImageToQuote/AddImageToCard.jsx"; // Componente de Erika para añadir imagen
+import AddImageToCard from "../addImageToQuote/AddImageToCard.jsx"; // Componente para añadir imagen :)
 
 function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
   const [editingId, setEditingId] = useState(null);
@@ -30,25 +30,25 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
           <div key={phrase.id} className="phrase-card">
             {editingId === phrase.id ? (
               <>
-                {/* ✅ Usamos el componente de edición de tu compañera */}
+               
                 <EditPhrase
                   phrase={phrase}
                   onSave={handleSave}
                   onCancel={handleCancel}
                 />
 
-                {/* ✅ Solo mostrar AddImageToCard cuando se edita la frase inicial */}
+                
                 {phrase.id === 0 && (
                   <AddImageToCard phrase={phrase} onSaveImage={onEditPhrase} />
                 )}
               </>
             ) : (
               <>
-                {/* Mostrar frase y autor */}
+                
                 <p className="phrase-text">"{phrase.text}"</p>
                 <p className="phrase-author">— {phrase.author || "Anonymous"}</p>
 
-                {/* Mostrar imagen si existe */}
+           
                 {phrase.image && (
                   <img
                     src={phrase.image}
@@ -62,7 +62,6 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
                   />
                 )}
 
-                {/* Mostrar botón "Add image" si no hay imagen, no está en edición y no es la frase inicial */}
                 {!phrase.image &&
                   editingId !== phrase.id &&
                   phrase.id !== 0 && (
@@ -72,7 +71,7 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
                     />
                   )}
 
-                {/* Acciones de editar y eliminar */}
+            
                 <div className="actions">
                   <button
                     className="edit-btn"
