@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AddPhraseForm.scss"
+import newbutton from "../../assets/iconadd.svg"
 
 
 function AddPhraseForm({onAdd}) {
@@ -16,8 +17,7 @@ function AddPhraseForm({onAdd}) {
 
     return (
         <form className="add-phrase-form" onSubmit={handleSubmit}>
-            <h2>Inspiration Quotes</h2>
-
+            
             <label htmlFor="phrase-input">Your phrase:</label>
             <textarea
             id="phrase-input"
@@ -28,16 +28,16 @@ function AddPhraseForm({onAdd}) {
             required
             />
 
-            <label htmlFor="author-input">Author (opcional): </label>
+            <label htmlFor="author-input">Author (optional): </label>
             <input 
             id="author-input"
             type="text"
             value={author}
             onChange={(e) => setAuthor (e.target.value)}
-            placeholder="Author (opcional)" 
+            placeholder="Author (optional)" 
             />
 
-            <button type="submit">Add Phrase</button> 
+            <button className="buttoncard" type="submit"><img src={newbutton} alt="" /></button> 
         </form>
     );
 
