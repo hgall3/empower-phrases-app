@@ -1,0 +1,71 @@
+@use "/src/styles/variables.scss" as *;
+@use "/src/styles/function.scss" as *;
+
+.image-form {
+  background-color: $card-color;
+  width: 100%;
+  max-width: 620px;
+  padding: px-to-rem(20);
+  border-radius: px-to-rem(20);
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(16);
+
+  input {
+  width: 95%;
+  padding: px-to-rem(10);
+  font-family: $font-primary;
+  font-size: px-to-rem(16);
+  border: 1px solid $accent_brown;
+  border-radius: px-to-rem(10);
+  color: black;
+}
+
+.quote-input::placeholder,
+.author-input::placeholder,
+.image-input::placeholder {
+  font-style: italic;
+  color: lighten(gray, 25%);
+  font-family: $font-primary;
+}
+
+
+  .image-url-row {
+    display: block;
+    gap: px-to-rem(10);
+    align-items: center;
+
+    input {
+      width: 95%;;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: black;
+      font-family: $font-primary;
+      border: 1px solid $accent_brown;
+      border-radius: 10%;
+      padding: px-to-rem(10);
+      cursor: pointer;
+      width: auto;
+
+      &:hover {
+        background-color: lighten($primary-color, 10%);
+      }
+    }
+  }
+
+  .icons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: px-to-rem(10);
+
+    img {
+      width: px-to-rem(36);
+      height: px-to-rem(36);
+      cursor: pointer;
+    }
+  }
+}
