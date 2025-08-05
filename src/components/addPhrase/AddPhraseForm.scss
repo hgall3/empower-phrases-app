@@ -13,14 +13,6 @@
     border-radius: px-to-rem(20);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-  /*   h2 {
-        font-family: $font-primary;
-        font-size: px-to-rem(24);
-        margin-bottom: px-to-rem(10);
-        color: $accent_brown;
-        text-align: center;
-    } */
-
     textarea,
     input {
         font-family: $font-primary;
@@ -31,18 +23,16 @@
     }
 
     button {
-        width: 20%;
-        padding: px-to-rem(12);
-        background-color: #4caf50;
-        color: $primary-color;
-        border: none;
-        border-radius: px-to-rem(10);
-        font-size: px-to-rem(16);
-        cursor: pointer;
+    width: 20%;
+    padding: px-to-rem(12);
+    background-color: transparent; 
+    color: white;
+    border: none;
+    border-radius: px-to-rem(10);
+    font-size: px-to-rem(16);
+    cursor: pointer;
 
-        &:hover {
-            background-color: #45a049;
-        }
+       
 
     }
 }

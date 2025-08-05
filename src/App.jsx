@@ -6,14 +6,14 @@ import { initialPhrases } from './assets/data/data.js'
 import logo from './assets/logoGT.png'
 import flowersRight from './assets/flowers_right.png'
 import flowersLeft from './assets/flowers_left.png'
-
-
+import instagram from "./assets/instagram.svg"
+import tiktok from "./assets/tiktok.svg"
+import tw from "./assets/twitter.svg"
 
 //Prueba
 
 function App() {
-  const [phrases, setPhrases] = useState(initialPhrases)
-
+  const [phrases, setPhrases] = useState(initialPhrases);
   const handleAddPhrase = (newPhrase) => {
     setPhrases(prev => [...prev, newPhrase])
   }
@@ -32,6 +32,11 @@ function App() {
     <div className="app-wrapper">
       <header>
         <img className="logo" src={logo} alt="logo garden of thoughts" />
+        <div className='welcome'>
+        <h1> Welcome To The Garden Of Thoughts!</h1>
+        <p className='welcometext'> Take a moment to explore inspiring quotes, edit your favorties, or add your own words of wisdom. <br />let your thoughts bloom here!</p>
+      </div>
+      <button className='buttonheader'> Add New Phrase</button>
       </header>
 
       <main className="box-global">
@@ -50,7 +55,11 @@ function App() {
       </main>
 
       <footer>
-        <h1>.</h1>
+      <div className="socials">
+          <img className='ig' src={instagram} alt="instragram" />
+           <img className='tik' src={tiktok} alt="tiktok" />
+           <img className='tw'src={tw} alt="x" />  
+        </div>
       </footer>
     </div>
   )
