@@ -1,6 +1,7 @@
 @use 'variables' as *;
 @use 'function' as *;
 @use 'mixin' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 #root {
@@ -24,9 +25,28 @@ header{
     background-color: transparent;
     @include flex-align();
     .logo{
-        height: px-to-rem(130);
+        height: px-to-rem(110);
         padding-left: px-to-rem(10);
-    }  
+    }
+    .welcome {
+      display: flex;
+      padding-top: px-to-rem(2);
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1{
+      display: flex;
+      justify-content: center;
+      padding-top: px-to-rem(20);
+    }
+    .welcometext {
+      display: flex;
+      justify-content: center;
+      margin-right: -50px;
+      margin-left: -50px;
+    }
+
 };
 
 
@@ -62,17 +82,40 @@ header{
     }
   }
   
-footer{
-  background: 
-  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%238D895C" fill-opacity="1" d="M0,160L60,160C120,160,240,160,360,170.7C480,181,600,203,720,197.3C840,192,960,160,1080,133.3C1200,107,1320,85,1380,74.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>')
-  no-repeat top center;
-background-size: cover;
-/*background-color: $secondary-color;*/ //aqui es para que el footer sea recto
-width: 100vw;
-height: 40vh;
-z-index: -1;  //estos valores cambian si el footer es recto 
-};
-
+  footer {
+    position: relative;
+    background: 
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%238D895C" fill-opacity="1" d="M0,160L60,160C120,160,240,160,360,170.7C480,181,600,203,720,197.3C840,192,960,160,1080,133.3C1200,107,1320,85,1380,74.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>')
+      no-repeat top center;
+    background-size: cover;
+    width: 100vw;
+    height: 40vh;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+  
+    .socials {
+      display: flex;
+      gap: px-to-rem(16);
+      padding-bottom: px-to-rem(50); 
+      transform: translateY(0); 
+      transition: transform 0.3s ease;
+  
+      img {
+        width: px-to-rem(40);
+        height: auto;
+        opacity: 0.9;
+        transition: transform 0.2s ease;
+  
+        &:hover {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
 
 
 .phrases-container {
@@ -83,5 +126,87 @@ z-index: -1;  //estos valores cambian si el footer es recto
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;  //estos valores cambian si el footer es recto 
+    z-index: 2;  
   }
+
+
+
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: px-to-rem(10);
+      gap: px-to-rem(5);
+      margin: 0;
+  
+      .logo {
+        height: px-to-rem(60);
+        padding-left: 0;
+      }
+  
+      .welcome {
+        align-items: center;
+        text-align: center;
+        padding-top: px-to-rem(1);
+  
+        h1 {
+          font-size: px-to-rem(20); 
+          padding-top: px-to-rem(5);
+          margin: 0;
+        }
+  
+        .welcometext {
+          font-size: px-to-rem(14); 
+          margin: px-to-rem(10);
+          padding: px-to-rem(10);
+        }
+      }
+  
+      button {
+        font-size: px-to-rem(14);
+        padding: px-to-rem(4) px-to-rem(4);
+        margin-top: px-to-rem(0);
+        width: 40%;
+        max-width: px-to-rem(200);
+      }
+    }
+    .box-global {
+      .img-left {
+        height: 40vh;
+        top: auto;
+        bottom: 0;
+        left: 0;
+      }
+
+      .img-right{
+        height: 40vh;
+        top: auto;
+        bottom: 0;
+        right: 0;
+      }
+  
+      /* .img-right {
+        display: none; // si queremos esconder la flor de la derecha
+      } */
+    }
+
+    .box-global{
+      margin: 0;
+      padding: 0;
+    }
+
+    .buttonheader{
+      display: none;
+    }
+    
+    .buttoncard {
+      .buttoncard {
+        width: 40%; 
+        padding: px-to-rem(8);
+        font-size: px-to-rem(10);
+      }
+    }
+  }
+  
