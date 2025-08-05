@@ -93,13 +93,13 @@ header{
     z-index: -1;
     display: flex;
     justify-content: center;
-    align-items: flex-end; // ⬅️ Esto alinea al fondo del footer
+    align-items: flex-end; 
   
     .socials {
       display: flex;
       gap: px-to-rem(16);
-      padding-bottom: px-to-rem(50); // ⬅️ Espacio visual desde el borde
-      transform: translateY(0); // aquí podrías ajustar si quieres bajarlo más
+      padding-bottom: px-to-rem(50); 
+      transform: translateY(0); 
       transition: transform 0.3s ease;
   
       img {
@@ -126,7 +126,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;  //estos valores cambian si el footer es recto 
+    z-index: 2;  
   }
 
 
@@ -196,6 +196,17 @@ header{
       margin: 0;
       padding: 0;
     }
+
+    .buttonheader{
+      display: none;
+    }
     
+    .buttoncard {
+      .buttoncard {
+        width: 40%; 
+        padding: px-to-rem(8);
+        font-size: px-to-rem(10);
+      }
+    }
   }
   
