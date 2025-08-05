@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AddPhraseForm.scss"
+import newbutton from "../../assets/icon-newQuote.svg"
 
 
 function AddPhraseForm({onAdd}) {
@@ -37,7 +38,7 @@ function AddPhraseForm({onAdd}) {
             placeholder="Author (opcional)" 
             />
 
-            <button type="submit">Add Phrase</button> 
+            <button className="buttoncard" type="submit"><img src={newbutton} alt="" /></button> 
         </form>
     );
 
