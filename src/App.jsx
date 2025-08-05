@@ -2,6 +2,12 @@ import { useState } from 'react'
 import AddPhraseForm from './components/addPhrase/AddPhraseForm'
 import PhraseList from './components/phraseList/PhraseList'
 import './styles/main.scss'
+import { initialPhrases } from './assets/data/data.js'
+import logo from './assets/logoGT.png'
+import flowersRight from './assets/flowers_right.png'
+import flowersLeft from './assets/flowers_left.png'
+
+
 
 //Prueba
 
