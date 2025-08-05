@@ -4,7 +4,7 @@ import PhraseList from './components/phraseList/PhraseList'
 import AddPhraseForm from './components/addPhrase/AddPhraseForm.jsx'
 import { initialPhrases } from './assets/data/data.js'
 
-
+//Prueba
 
 function App() {
   const [phrases, setPhrases] = useState(initialPhrases)
