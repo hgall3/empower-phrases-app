@@ -11,8 +11,7 @@ import flowersLeft from './assets/flowers_left.png'
 //Prueba
 
 function App() {
-  const [phrases, setPhrases] = useState(initialPhrases)
-
+  const [phrases, setPhrases] = useState(initialPhrases);
   const handleAddPhrase = (newPhrase) => {
     setPhrases(prev => [...prev, newPhrase])
   }
