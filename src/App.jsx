@@ -8,7 +8,6 @@ import flowersRight from './assets/flowers_right.png'
 import flowersLeft from './assets/flowers_left.png'
 
 
-
 //Prueba
 
 function App() {
