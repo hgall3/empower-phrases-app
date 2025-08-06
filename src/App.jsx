@@ -34,9 +34,9 @@ function App() {
         <img className="logo" src={logo} alt="logo garden of thoughts" />
         <div className='welcome'>
         <h1> Welcome To The Garden Of Thoughts!</h1>
-        <p className='welcometext'> Take a moment to explore inspiring quotes, edit your favorties, or add your own words of wisdom. <br />let your thoughts bloom here!</p>
+        <p className='welcometext'> Take a moment to explore inspiring quotes, edit your favorties, <br /> or add your own words of wisdom. <br />let your thoughts bloom here!</p>
       </div>
-      <button className='buttonheader'> Add New Phrase</button>
+      <button className='buttonheader'></button>  
       </header>
 
       <main className="box-global">
