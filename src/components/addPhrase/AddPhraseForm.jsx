@@ -1,4 +1,8 @@
 import { useState } from "react";
+import "./AddPhraseForm.scss"
+import newbutton from "../../assets/iconadd.svg"
+import AddImageToCard from "../addImageToQuote/AddImageToCard";
+
 import "./AddPhraseForm.scss";
 import newbutton from "../../assets/iconadd.svg";
 import ModalFillQuote from "../warningModal/ModalFillQuote"; // modal de tu amiga
@@ -48,6 +52,23 @@ function AddPhraseForm({ onAdd }) {
           rows={3}
         />
 
+            <label htmlFor="author-input">Author (optional): </label>
+            <input 
+            id="author-input"
+            type="text"
+            value={author}
+            onChange={(e) => setAuthor (e.target.value)}
+            placeholder="Author (optional)" 
+            />
+           {/* Estoy agregando input para imagen 1 línea */} 
+            <AddImageToCard imageUrl={image} setImageUrl={setImage} />
+
+            <button className="buttoncard" type="submit">
+                <img src={newbutton} alt="Add button" /></button> 
+        </form>
+        );
+    
+};
         <label htmlFor="author-input">Author (optional):</label>
         <input
           id="author-input"
