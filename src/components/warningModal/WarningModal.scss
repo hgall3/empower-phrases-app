@@ -7,27 +7,27 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(180, 180, 180, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .warning-modal {
-  background: rgba(255, 255, 255, 0.5);
+  background: white;
   padding: px-to-rem(30);
-  border-radius: px-to-rem(12);
+  border-radius: 1rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  max-width: px-to-rem(350);
+  max-width: px-to-rem(300);
   width: 90%;
 
   p {
     font-family: $font-primary;
     font-size: px-to-rem(16);
     margin-bottom: px-to-rem(20);
-    color: black
+    color: #333;
   }
 
   button {

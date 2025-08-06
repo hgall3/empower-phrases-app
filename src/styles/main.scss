@@ -46,6 +46,10 @@ header{
       margin-right: -50px;
       margin-left: -50px;
     }
+    .buttonheader{
+      background: transparent;
+      border: none;
+    }
 
 };
 
@@ -186,10 +190,7 @@ header{
         bottom: 0;
         right: 0;
       }
-  
-      /* .img-right {
-        display: none; // si queremos esconder la flor de la derecha
-      } */
+
     }
 
     .box-global{
