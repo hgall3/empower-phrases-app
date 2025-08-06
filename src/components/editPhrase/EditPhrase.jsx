@@ -3,7 +3,7 @@ import "./EditPhrase.scss";
 import AddImageToCard from "../addImageToQuote/AddImageToCard";
 import Modal from "../warningModal/ModalFillQuote";
 
-function EditPhrase({ phrase, onSave, onCancel }) {
+function EditPhrase({ phrase, onSave }) {
   const [text, setText] = useState(phrase.text);
   const [author, setAuthor] = useState(phrase.author);
   const [imageUrl, setImageUrl] = useState(phrase.image || "");
