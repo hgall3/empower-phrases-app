@@ -3,7 +3,7 @@ import "../phraseList/PhraseList.scss";
 import EditPhrase from "../editPhrase/EditPhrase.jsx";
 import editIcon from "../../assets/edit.svg";
 import trashIcon from "../../assets/trash.svg";
-import AddImageToCard from "../addImageToQuote/AddImageToCard.jsx";
+import AddImageCard from "../addImageToQuote/AddImageCard.jsx";
 import WarningDeleteModal from "../warningModal/WarningDeleteModal"; 
 
 function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
@@ -51,9 +51,6 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
                   onSave={handleSave}
                   onCancel={handleCancel}
                 />
-                {phrase.id === 0 && (
-                  <AddImageToCard phrase={phrase} onSaveImage={onEditPhrase} />
-                )}
               </>
             ) : (
               <>
@@ -73,14 +70,6 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
                   />
                 )}
 
-                {!phrase.image &&
-                  editingId !== phrase.id &&
-                  phrase.id !== 0 && (
-                    <AddImageToCard
-                      phrase={phrase}
-                      onSaveImage={onEditPhrase}
-                    />
-                  )}
                 <div className="actions">
                   <button
                     className="edit-btn"

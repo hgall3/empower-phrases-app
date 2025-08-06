@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./EditPhrase.scss";
-import AddImageToCard from "../addImageToQuote/AddImageToCard";
+import AddImageCard from "../addImageToQuote/AddImageCard";
 import Modal from "../warningModal/ModalFillQuote";
 
 function EditPhrase({ phrase, onSave }) {
@@ -41,7 +41,7 @@ function EditPhrase({ phrase, onSave }) {
           onChange={(e) => setAuthor(e.target.value)}
         />
 
-        <AddImageToCard imageUrl={image} setImageUrl={setImage} showLabel={false} />
+        <AddImageCard imageUrl={image} setImageUrl={setImage} showLabel={false} />
 
 
         <div className="buttons">

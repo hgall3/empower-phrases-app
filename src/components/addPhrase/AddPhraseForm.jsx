@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AddPhraseForm.scss";
 
-import AddImageToCard from "../addImageToQuote/AddImageToCard";
+import AddImageCard from "../addImageToQuote/AddImageCard";
 import newbutton from "../../assets/iconadd.svg";
 import ModalFillQuote from "../warningModal/ModalFillQuote"; 
 import WarningModal from "../warningModal/WarningModal"; 
@@ -57,7 +57,7 @@ return (
     placeholder="Author (optional)"
     />
 
-        <AddImageToCard imageUrl={image} setImageUrl={setImage} />
+        <AddImageCard imageUrl={image} setImageUrl={setImage} />
 
         <button className="buttoncard" type="submit">
         <img src={newbutton} alt="Add button" />
