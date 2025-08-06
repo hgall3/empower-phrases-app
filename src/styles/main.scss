@@ -13,41 +13,48 @@
 body {
   font-family: $font-primary;
   background-color: $primary-color; 
-  /*height: 100vh;
-  overflow: hidden;*/
   margin: 0;
   padding: 0;
 }
 
-header{
-    width: 100vw;
-    height: 15vh;
-    background-color: transparent;
-    @include flex-align();
-    .logo{
-        height: px-to-rem(110);
-        padding-left: px-to-rem(10);
-    }
-    .welcome {
-      display: flex;
-      padding-top: px-to-rem(2);
-      flex-direction: column;
-      justify-content: center;
-    }
+header {
+  width: 100vw;
+  height: 15vh;
+  background-color: transparent;
+  @include flex-align(); 
 
-    h1{
-      display: flex;
-      justify-content: center;
+  .logo {
+    height: px-to-rem(110);
+    padding-left: px-to-rem(10);
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding-top: px-to-rem(2);
+    transform: translateX(-65px); 
+    
+
+    h1 {
+      margin: 0; 
       padding-top: px-to-rem(20);
     }
-    .welcometext {
-      display: flex;
-      justify-content: center;
-      margin-right: -50px;
-      margin-left: -50px;
-    }
 
-};
+    .welcometext {
+      margin: 0; 
+      padding: 0 px-to-rem(10);
+    }
+  }
+
+  .buttonheader {
+    background: transparent;
+    border: none;
+  }
+}
+
 
 
 .app-wrapper {
@@ -67,9 +74,9 @@ header{
     .img-left,
     .img-right {
       position: fixed;
-      top: 15vh;      //estos valores cambian si el footer es recto 
-      height: 85vh;   //estos valores cambian si el footer es recto 
-      z-index: 1;     //estos valores cambian si el footer es recto 
+      top: 15vh;       
+      height: 85vh;    
+      z-index: 1;     
       pointer-events: none;
     }
   
@@ -150,6 +157,7 @@ header{
         align-items: center;
         text-align: center;
         padding-top: px-to-rem(1);
+        transform: none;
   
         h1 {
           font-size: px-to-rem(20); 
@@ -159,7 +167,7 @@ header{
   
         .welcometext {
           font-size: px-to-rem(14); 
-          margin: px-to-rem(10);
+          margin: px-to-rem(20);
           padding: px-to-rem(10);
         }
       }
@@ -186,10 +194,7 @@ header{
         bottom: 0;
         right: 0;
       }
-  
-      /* .img-right {
-        display: none; // si queremos esconder la flor de la derecha
-      } */
+
     }
 
     .box-global{
