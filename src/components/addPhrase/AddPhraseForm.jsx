@@ -3,7 +3,7 @@ import "./AddPhraseForm.scss";
 
 import AddImageToCard from "../addImageToQuote/AddImageToCard";
 import newbutton from "../../assets/iconadd.svg";
-//import ModalFillQuote from "../warningModal/ModalFillQuote"; // modal de tu amiga
+import ModalFillQuote from "../warningModal/ModalFillQuote"; // modal de tu amiga
 import WarningModal from "../warningModal/WarningModal"; // tu modal
 
 function AddPhraseForm({onAdd}) {
@@ -66,13 +66,13 @@ function AddPhraseForm({onAdd}) {
         </button>
       </form>
 
-    {/*  {/* Modal de error 
+    {/* Modal de error */}
       {showErrorModal && (
         <ModalFillQuote
           message="Please fill out the quote before adding."
           onClose={() => setShowErrorModal(false)}
         />
-      )}  */}
+      )}  
 
       {/* Modal de éxito */}
       {showSuccessModal && (
