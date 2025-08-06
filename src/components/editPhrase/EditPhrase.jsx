@@ -40,12 +40,14 @@ function EditPhrase({ phrase, onSave, onCancel }) {
           <button onClick={handleSave}>Save</button>
         </div>
       </div>
-      {showModal && (
+
+        {showModal && (
         <Modal
           message="Please fill out the quote before saving."
           onClose={() => setShowModal(false)}
         />
       )}
+      
     </>
   );
 }
