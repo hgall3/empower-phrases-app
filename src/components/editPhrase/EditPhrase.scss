@@ -21,7 +21,7 @@
     outline: none;
 
     &::placeholder {
-      color: lighten($secondary-color, 20%);
+      font-style: italic;
     }
 
     &:focus {

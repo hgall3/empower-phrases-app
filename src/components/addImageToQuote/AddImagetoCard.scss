@@ -1,0 +1,39 @@
+@use "/src/styles/variables.scss" as *;
+@use "/src/styles/function.scss" as *;
+
+.image-url-row {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .image-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid $accent_brown; 
+    font-family: $font-primary;
+
+    &::placeholder {
+      font-style: italic;
+      
+    }
+  }
+
+  .add-image-btn,
+  .save-image-btn {
+    background-color: $accent_brown;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: $font-primary;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken($accent_brown, 10%);
+    }
+  }
+}
+

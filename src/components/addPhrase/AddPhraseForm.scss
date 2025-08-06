@@ -13,14 +13,6 @@
     border-radius: px-to-rem(20);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-  /*   h2 {
-        font-family: $font-primary;
-        font-size: px-to-rem(24);
-        margin-bottom: px-to-rem(10);
-        color: $accent_brown;
-        text-align: center;
-    } */
-
     textarea,
     input {
         font-family: $font-primary;
@@ -28,19 +20,26 @@
         border: 1px solid #ccc;
         border-radius: px-to-rem(10);
         font-size: px-to-rem(16);
-    }
+        border: 1px solid $accent_brown;
 
-    button {
-        width: 20%;
-        padding: px-to-rem(12);
+        &::placeholder {
+        font-style: italic;
         
-        color: white;
-        border: none;
-        border-radius: px-to-rem(10);
-        font-size: px-to-rem(16);
-        cursor: pointer;
-
-       
-
+        }
+               
     }
+
+   .buttoncard {
+    width: 10%;
+    padding: 0.4rem 0.8rem;
+    margin-right: auto;
+    background-color: transparent; 
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    
+   }
+       
 }
+
