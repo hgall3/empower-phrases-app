@@ -81,14 +81,13 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
                       onSaveImage={onEditPhrase}
                     />
                   )}
-
                 <div className="actions">
                   <button
                     className="edit-btn"
                     onClick={() => handleEditClick(phrase.id)}
                     aria-label="Edit phrase"
                   >
-                    <img src={editIcon} alt="Editar" />
+                    <img src={editIcon} alt="button to edit" />
                   </button>
 
                   <button
