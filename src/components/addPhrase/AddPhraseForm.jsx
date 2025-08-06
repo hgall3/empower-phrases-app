@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./AddPhraseForm.scss"
 import newbutton from "../../assets/iconadd.svg"
+import AddImageToCard from "../addImageToQuote/AddImageToCard";
 
 
 function AddPhraseForm({onAdd}) {
@@ -47,18 +48,8 @@ function AddPhraseForm({onAdd}) {
             onChange={(e) => setAuthor (e.target.value)}
             placeholder="Author (optional)" 
             />
-           {/* Estoy agregando input para imagen 8 líneas */} 
-            <label htmlFor="image-input">
-                
-            </label>
-            <input
-                id="image-input"
-                type="text"
-                value={image}
-                onChange={(e) => setImage(e.target.value)}
-                placeholder="Add an image to your Quote from an URL (optional):"
-                />
-
+           {/* Estoy agregando input para imagen 1 línea */} 
+            <AddImageToCard imageUrl={image} setImageUrl={setImage} />
 
             <button className="buttoncard" type="submit">
                 <img src={newbutton} alt="Add button" /></button> 

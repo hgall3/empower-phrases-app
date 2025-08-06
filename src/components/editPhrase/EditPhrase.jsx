@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./EditPhrase.scss";
+import AddImageToCard from "../addImageToQuote/AddImageToCard";
 
 function EditPhrase({ phrase, onSave, onCancel }) {
   const [text, setText] = useState(phrase.text);
   const [author, setAuthor] = useState(phrase.author);
+  const [imageUrl, setImageUrl] = useState(phrase.image || "");
   const [showModal, setShowModal] = useState(false);
 
   const handleSave = () => {
@@ -16,6 +18,8 @@ function EditPhrase({ phrase, onSave, onCancel }) {
       ...phrase,
       text: text.trim(),
       author: author.trim() || "Anonymous",
+      image: imageUrl.trim() || "",
+
     });
   };
 
@@ -35,6 +39,9 @@ function EditPhrase({ phrase, onSave, onCancel }) {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
+
+        <AddImageToCard imageUrl={imageUrl} setImageUrl={setImageUrl} />
+
         <div className="buttons">
           <button onClick={handleSave}>Save</button>
         </div>

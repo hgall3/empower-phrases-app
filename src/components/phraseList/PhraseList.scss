@@ -12,12 +12,11 @@
 .phrase-card {
   position: relative;
   background-color: $card-color;
-  padding: 2rem;
+  padding: px-to-rem(20);
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 600px;
-  text-align: start;
+  max-width: px-to-rem(600);
   transition: transform 0.2s ease;
 
   &:hover {
