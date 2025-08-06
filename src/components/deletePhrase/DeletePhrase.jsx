@@ -1,19 +1,35 @@
-import "./DeletePhrase.scss"
-import trashIcon from "../../assets/trash.svg"
+import { useState } from "react";
+import "./DeletePhrase.scss";
+import trashIcon from "../../assets/trash.svg";
+import WarningDeleteModal from "../warningModal/WarningDeleteModal"; // tu modal
 
 function DeletePhrase({ id, onDelete }) {
-  const handleDelete = () => {
-    const confirmDelete = window.confirm("¿Eliminar esta frase?")
-    if (confirmDelete) {
-      onDelete(id)
-    }
-  }
+
+    const [showModal, setShowSuccessModal] = useState(false);
+
+  const handleClick = () => {
+    setShowSuccessModal(true);
+  };
+
+  const handleConfirm = () => {
+    onDelete(id);
+    setShowSuccessModal(false);
+  };
+
+  const handleCancel = () => {
+    setShowSuccessModal(false);
+  };
 
   return (
-    <button className="delete-phrase-btn" onClick={handleDelete} aria-label="Eliminar frase">
-      <img src={trashIcon} alt="Eliminar" />
-    </button>
-  )
+    <>
+      <button className="delete-phrase-btn" onClick={handleClick} aria-label="Eliminar frase">
+        <img src={trashIcon} alt="Eliminar" />
+      </button>
+        {showModal && (
+        <WarningDeleteModal onClose={() => setShowSuccessModal(false) } handleConfirm= {handleConfirm}/>
+      )}
+    </>
+  );
 }
 
-export default DeletePhrase
+export default DeletePhrase;
