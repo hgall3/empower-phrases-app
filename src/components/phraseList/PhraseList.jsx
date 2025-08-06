@@ -1,11 +1,15 @@
 import { useState } from "react";
 import "../phraseList/PhraseList.scss";
-import DeletePhrase from "../deletePhrase/DeletePhrase.jsx";
 import EditPhrase from "../editPhrase/EditPhrase.jsx";
 import editIcon from "../../assets/edit.svg";
+import trashIcon from "../../assets/trash.svg";
+import AddImageToCard from "../addImageToQuote/AddImageToCard.jsx";
+import WarningDeleteModal from "../warningModal/WarningDeleteModal"; 
 
 function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
   const [editingId, setEditingId] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedId, setSelectedId] = useState(null);
 
   const handleEditClick = (id) => {
     setEditingId(id);
@@ -20,6 +24,19 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
     setEditingId(null);
   };
 
+  const handleDeleteClick = (id) => {
+    setSelectedId(id);
+    setShowModal(true);
+  };
+
+  const handleConfirmDelete = () => {
+    if (selectedId !== null) {
+      onDeletePhrase(selectedId);
+    }
+    setShowModal(false);
+    setSelectedId(null);
+  };
+
   return (
     <div className="phrase-list">
       {phrases.length === 0 ? (
@@ -28,11 +45,16 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
         phrases.map((phrase) => (
           <div key={phrase.id} className="phrase-card">
             {editingId === phrase.id ? (
-              <EditPhrase
-                phrase={phrase}
-                onSave={handleSave}
-                onCancel={handleCancel}
-              />
+              <>
+                <EditPhrase
+                  phrase={phrase}
+                  onSave={handleSave}
+                  onCancel={handleCancel}
+                />
+                {phrase.id === 0 && (
+                  <AddImageToCard phrase={phrase} onSaveImage={onEditPhrase} />
+                )}
+              </>
             ) : (
               <>
                 <p className="phrase-text">"{phrase.text}"</p>
@@ -51,6 +73,14 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
                   />
                 )}
 
+                {!phrase.image &&
+                  editingId !== phrase.id &&
+                  phrase.id !== 0 && (
+                    <AddImageToCard
+                      phrase={phrase}
+                      onSaveImage={onEditPhrase}
+                    />
+                  )}
                 <div className="actions">
                   <button
                     className="edit-btn"
@@ -60,12 +90,25 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
                     <img src={editIcon} alt="button to edit" />
                   </button>
 
-                  <DeletePhrase id={phrase.id} onDelete={onDeletePhrase} />
+                  <button
+                    className="delete-phrase-btn"
+                    onClick={() => handleDeleteClick(phrase.id)}
+                    aria-label="Eliminar frase"
+                  >
+                    <img src={trashIcon} alt="Eliminar" />
+                  </button>
                 </div>
               </>
             )}
           </div>
         ))
+      )}
+
+      {showModal && (
+        <WarningDeleteModal
+          onClose={() => setShowModal(false)}
+          handleConfirm={handleConfirmDelete}
+        />
       )}
     </div>
   );
