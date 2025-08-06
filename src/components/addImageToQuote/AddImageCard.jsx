@@ -1,6 +1,7 @@
-import "./AddImageToCard.scss";
+import "./AddImageCard.scss";
 
-function AddImageToCard({ imageUrl, setImageUrl, showLabel = true }) {
+
+function AddImageCard({ imageUrl, setImageUrl, showLabel = true }) {
   return (
     <div className="image-url-row">
       {showLabel && (
@@ -18,4 +19,4 @@ function AddImageToCard({ imageUrl, setImageUrl, showLabel = true }) {
   );
 }
 
-export default AddImageToCard;
+export default AddImageCard;
