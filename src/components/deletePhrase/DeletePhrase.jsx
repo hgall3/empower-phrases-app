@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./DeletePhrase.scss";
 import trashIcon from "../../assets/trash.svg";
-/* import WarningDeleteModal from "../warningModal/WarningDeleteModal"; // tu modal */
 
 function DeletePhrase({ id, onDelete }) {
 
@@ -15,10 +14,6 @@ function DeletePhrase({ id, onDelete }) {
     onDelete(id);
     setShowSuccessModal(false);
   };
-
-  /* const handleCancel = () => {
-    setShowSuccessModal(false); */
- /*  }; */
 
   return (
     <>
