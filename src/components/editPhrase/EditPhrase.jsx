@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./EditPhrase.scss";
 import AddImageToCard from "../addImageToQuote/AddImageToCard";
+import Modal from "../warningModal/ModalFillQuote";
 
 function EditPhrase({ phrase, onSave, onCancel }) {
   const [text, setText] = useState(phrase.text);
@@ -46,6 +47,14 @@ function EditPhrase({ phrase, onSave, onCancel }) {
           <button onClick={handleSave}>Save</button>
         </div>
       </div>
+
+        {showModal && (
+        <Modal
+          message="Please fill out the quote before saving."
+          onClose={() => setShowModal(false)}
+        />
+      )}
+      
     </>
   );
 }

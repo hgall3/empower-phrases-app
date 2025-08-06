@@ -3,21 +3,21 @@ import "./AddPhraseForm.scss";
 
 import AddImageToCard from "../addImageToQuote/AddImageToCard";
 import newbutton from "../../assets/iconadd.svg";
-import ModalFillQuote from "../warningModal/ModalFillQuote"; // modal de tu amiga
-import WarningModal from "../warningModal/WarningModal"; // tu modal
+import ModalFillQuote from "../warningModal/ModalFillQuote"; 
+import WarningModal from "../warningModal/WarningModal"; 
 
-function AddPhraseForm({onAdd}) {
-    const [text, setText] = useState("");
-    const [author, setAuthor] = useState("");
-    const [image, setImage] = useState(""); //Agregado por Erika para imagen 
-    const [showErrorModal, setShowErrorModal] = useState(false);
-    const [showSuccessModal, setShowSuccessModal] = useState(false); 
+function AddPhraseForm({ onAdd }) {
+  const [text, setText] = useState("");
+  const [author, setAuthor] = useState("");
+  const [image, setImage] = useState("");
+  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!text.trim()) {
-      setShowErrorModal(true);
+      setShowErrorModal(true); 
       return;
     }
 
@@ -28,15 +28,17 @@ function AddPhraseForm({onAdd}) {
       image: image.trim(),
     });
 
+    
     setText("");
     setAuthor("");
     setImage("");
+
+    
     setShowSuccessModal(true);
     setTimeout(() => setShowSuccessModal(false), 2000);
   };
 
-    return (
-      
+  return (
     <>
       <form className="add-phrase-form" onSubmit={handleSubmit}>
         <label htmlFor="phrase-input">Your phrase:</label>
@@ -46,7 +48,6 @@ function AddPhraseForm({onAdd}) {
           onChange={(e) => setText(e.target.value)}
           placeholder="Write your phrase..."
           rows={3}
-          required
         />
 
         <label htmlFor="author-input">Author (optional):</label>
@@ -66,15 +67,15 @@ function AddPhraseForm({onAdd}) {
         </button>
       </form>
 
-    {/* Modal de error */}
+      
       {showErrorModal && (
         <ModalFillQuote
           message="Please fill out the quote before adding."
           onClose={() => setShowErrorModal(false)}
         />
-      )}  
+      )}
 
-      {/* Modal de éxito */}
+      
       {showSuccessModal && (
         <WarningModal onClose={() => setShowSuccessModal(false)} />
       )}
