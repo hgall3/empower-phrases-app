@@ -20,12 +20,16 @@
     border: 1px solid $accent_brown;
     border-radius: px-to-rem(10);
     font-size: px-to-rem(16);
+    resize: vertical;
+    min-height: px-to-rem(80);
+    max-height: px-to-rem(400);
+    overflow: auto;
 }
 
-        &::placeholder {
-        font-style: italic;
-        
-        }
+    &::placeholder {
+    font-style: italic;
+    
+    }
 
     }
 
