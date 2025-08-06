@@ -59,7 +59,6 @@ function AddPhraseForm({ onAdd }) {
           placeholder="Author (optional)"
         />
 
-        {/* Componente modular para imagen */}
         <AddImageToCard imageUrl={image} setImageUrl={setImage} />
 
         <button className="buttoncard" type="submit">
