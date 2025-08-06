@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./AddPhraseForm.scss";
+
+import AddImageToCard from "../addImageToQuote/AddImageToCard";
 import newbutton from "../../assets/iconadd.svg";
 import ModalFillQuote from "../warningModal/ModalFillQuote"; 
 import WarningModal from "../warningModal/WarningModal"; 
@@ -57,14 +59,8 @@ function AddPhraseForm({ onAdd }) {
           placeholder="Author (optional)"
         />
 
-        <label htmlFor="image-input">Image URL (optional):</label>
-        <input
-          id="image-input"
-          type="text"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-          placeholder="Add an image to your Quote from a URL (optional)"
-        />
+        {/* Componente modular para imagen */}
+        <AddImageToCard imageUrl={image} setImageUrl={setImage} />
 
         <button className="buttoncard" type="submit">
           <img src={newbutton} alt="Add button" />

@@ -3,7 +3,6 @@ import "../phraseList/PhraseList.scss";
 import DeletePhrase from "../deletePhrase/DeletePhrase.jsx";
 import EditPhrase from "../editPhrase/EditPhrase.jsx";
 import editIcon from "../../assets/edit.svg";
-import AddImageToCard from "../addImageToQuote/AddImageToCard.jsx"; // Componente para añadir imagen :)
 
 function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
   const [editingId, setEditingId] = useState(null);
@@ -29,26 +28,16 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
         phrases.map((phrase) => (
           <div key={phrase.id} className="phrase-card">
             {editingId === phrase.id ? (
-              <>
-               
-                <EditPhrase
-                  phrase={phrase}
-                  onSave={handleSave}
-                  onCancel={handleCancel}
-                />
-
-                
-                {phrase.id === 0 && (
-                  <AddImageToCard phrase={phrase} onSaveImage={onEditPhrase} />
-                )}
-              </>
+              <EditPhrase
+                phrase={phrase}
+                onSave={handleSave}
+                onCancel={handleCancel}
+              />
             ) : (
               <>
-                
                 <p className="phrase-text">"{phrase.text}"</p>
                 <p className="phrase-author">— {phrase.author || "Anonymous"}</p>
 
-           
                 {phrase.image && (
                   <img
                     src={phrase.image}
@@ -62,23 +51,13 @@ function PhraseList({ phrases, onDeletePhrase, onEditPhrase }) {
                   />
                 )}
 
-                {!phrase.image &&
-                  editingId !== phrase.id &&
-                  phrase.id !== 0 && (
-                    <AddImageToCard
-                      phrase={phrase}
-                      onSaveImage={onEditPhrase}
-                    />
-                  )}
-
-            
                 <div className="actions">
                   <button
                     className="edit-btn"
                     onClick={() => handleEditClick(phrase.id)}
                     aria-label="Edit phrase"
                   >
-                    <img src={editIcon} alt="Editar" />
+                    <img src={editIcon} alt="button to edit" />
                   </button>
 
                   <DeletePhrase id={phrase.id} onDelete={onDeletePhrase} />

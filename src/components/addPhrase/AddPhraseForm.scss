@@ -15,21 +15,21 @@
 
     textarea,
     input {
-        font-family: $font-primary;
-        padding: px-to-rem(10);
-        border: 1px solid #ccc;
-        border-radius: px-to-rem(10);
-        font-size: px-to-rem(16);
-        border: 1px solid $accent_brown;
+    font-family: $font-primary;
+    padding: px-to-rem(10);
+    border: 1px solid $accent_brown;
+    border-radius: px-to-rem(10);
+    font-size: px-to-rem(16);
+}
 
         &::placeholder {
         font-style: italic;
         
         }
-               
+
     }
 
-   .buttoncard {
+    .buttoncard {
     width: 10%;
     padding: 0.4rem 0.8rem;
     margin-right: auto;
@@ -39,7 +39,7 @@
     cursor: pointer;
 
     
-   }
-       
-}
+    }
+    
+
 
