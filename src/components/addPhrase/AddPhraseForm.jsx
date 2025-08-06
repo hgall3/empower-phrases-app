@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./AddPhraseForm.scss";
 import newbutton from "../../assets/iconadd.svg";
-import ModalFillQuote from "../warningModal/ModalFillQuote"; // modal de tu amiga
-import WarningModal from "../warningModal/WarningModal"; // tu modal
+import ModalFillQuote from "../warningModal/ModalFillQuote"; 
+import WarningModal from "../warningModal/WarningModal"; 
 
 function AddPhraseForm({ onAdd }) {
   const [text, setText] = useState("");
@@ -15,7 +15,7 @@ function AddPhraseForm({ onAdd }) {
     e.preventDefault();
 
     if (!text.trim()) {
-      setShowErrorModal(true); // mostrar modal de error
+      setShowErrorModal(true); 
       return;
     }
 
@@ -26,12 +26,12 @@ function AddPhraseForm({ onAdd }) {
       image: image.trim(),
     });
 
-    // Reset campos
+    
     setText("");
     setAuthor("");
     setImage("");
 
-    // Mostrar modal de éxito
+    
     setShowSuccessModal(true);
     setTimeout(() => setShowSuccessModal(false), 2000);
   };
@@ -71,7 +71,7 @@ function AddPhraseForm({ onAdd }) {
         </button>
       </form>
 
-      {/* Modal de error */}
+      
       {showErrorModal && (
         <ModalFillQuote
           message="Please fill out the quote before adding."
@@ -79,7 +79,7 @@ function AddPhraseForm({ onAdd }) {
         />
       )}
 
-      {/* Modal de éxito */}
+      
       {showSuccessModal && (
         <WarningModal onClose={() => setShowSuccessModal(false)} />
       )}
