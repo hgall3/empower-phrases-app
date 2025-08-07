@@ -1,8 +1,13 @@
 # 🌱 Empowering Phrases App
 
-Welcome! This is a simple, responsive web app where you can create, read, update, and delete empowering phrases, each one tied to an author and, optionally, an image. It's built with **React.js 19** and follows the **Atomic Design** methodology to keep everything modular and scalable.
+Welcome! This is a simple, responsive web app where you can create, read, update, and delete empowering phrases, each one tied to an author and an image. It's built with **React.js 19** and follows the **UI Atomic Design** in Figma to keep everything modular and scalable.
 
 ---
+## 🔍 Sneak Peek
+
+Here’s what the app looks like:
+
+![Screenshot of Empowering Phrases App](./src/assets/sneakpeek2.png)
 
 ## 🧠 How It Works
 
@@ -34,16 +39,21 @@ We used the following technologies to bring this project to life:
 To run the app locally, follow these steps:
 
 1. Clone the repository
-git clone https://github.com/hgall3/empower-phrases-app.git
+
+    git clone https://github.com/hgall3/empower-phrases-app.git
 
 2. Move into the project directory
-cd empowering-phrases-app
+
+    cd empowering-phrases-app
 
 3. Install dependencies
-npm install
+
+    npm install
 
 4. Start the development server
-npm run dev
+
+    npm run dev
+
 
 ## 👥 The Team
 
@@ -59,9 +69,5 @@ This app was built as a team by:
 
 
 
-## 🔍 Sneak Peek
 
-Here’s what the app looks like:
-
-![Screenshot of Empowering Phrases App](./src/assets/sneakpeek.png)
 
