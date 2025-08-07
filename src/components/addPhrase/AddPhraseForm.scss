@@ -2,19 +2,19 @@
 @use "/src/styles/function.scss" as *;
 
 .add-phrase-form {
-    width: 100%;
-    max-width: px-to-rem(600);
-    margin: 0 auto px-to-rem(40);
-    display: flex;
-    flex-direction: column;
-    gap: px-to-rem(12);
-    padding: px-to-rem(20);
-    background-color: $card-color;
-    border-radius: px-to-rem(20);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: px-to-rem(600);
+  margin: 0 auto px-to-rem(40);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(12);
+  padding: px-to-rem(20);
+  background-color: $card-color;
+  border-radius: px-to-rem(20);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-    textarea,
-    input {
+  textarea,
+  input {
     font-family: $font-primary;
     padding: px-to-rem(10);
     border: 1px solid $accent_brown;
@@ -24,26 +24,19 @@
     min-height: px-to-rem(80);
     max-height: px-to-rem(400);
     overflow: auto;
-}
 
     &::placeholder {
-    font-style: italic;
-    
+      font-style: italic;
     }
+  }
+}
 
-    }
-
-    .buttoncard {
-    width: 10%;
-    padding: 0.4rem 0.8rem;
-    margin-right: auto;
-    background-color: transparent; 
-    color: white;
-    border: none;
-    cursor: pointer;
-
-    
-    }
-    
-
-
+.buttoncard {
+  width: 10%;
+  padding: 0.4rem 0.8rem;
+  margin-right: auto;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
