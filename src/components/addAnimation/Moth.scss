@@ -1,0 +1,23 @@
+.moth2-container {
+    position: absolute;
+    top: 80%; 
+    left: 17%; 
+    z-index: 1;
+    pointer-events: none;
+    position: fixed;
+  }
+  
+  .moth2 {
+    width: 100px;
+    animation: moth2-fly 4s ease-in-out infinite;
+  }
+  
+  @keyframes moth2-fly {
+    0%   { transform: translate(0px, 0px) rotate(0deg); }
+    20%  { transform: translate(2px, -4px) rotate(1deg); }
+    40%  { transform: translate(-3px, -6px) rotate(-1deg); }
+    60%  { transform: translate(2px, -2px) rotate(1.5deg); }
+    80%  { transform: translate(-2px, 1px) rotate(-1deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+  

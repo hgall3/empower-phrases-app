@@ -5,15 +5,16 @@ import './styles/main.scss'
 import { initialPhrases } from './assets/data/data.js'
 import logo from './assets/logoGT.png'
 import flowersRight from './assets/flowers_right.png'
-import flowersLeft from './assets/flowers_left.png'
+import flowersLeft from './assets/flowers_no_moth.png'
 import instagram from "./assets/instagram.svg"
 import tiktok from "./assets/tiktok.svg"
 import tw from "./assets/twitter.svg"
-
-//Prueba
+import Animation from './components/addAnimation/Animation'
+import Moth from './components/addAnimation/Moth' 
 
 function App() {
-  const [phrases, setPhrases] = useState(initialPhrases);
+  const [phrases, setPhrases] = useState(initialPhrases)
+
   const handleAddPhrase = (newPhrase) => {
     setPhrases(prev => [...prev, newPhrase])
   }
@@ -33,10 +34,14 @@ function App() {
       <header>
         <img className="logo" src={logo} alt="logo garden of thoughts" />
         <div className='welcome'>
-        <h1> Welcome To Garden Of Thoughts!</h1>
-        <p className='welcometext'> Take a moment to explore inspiring quotes, edit your favorties, <br /> or add your own words of wisdom. <br />Let your thoughts bloom here!</p>
-      </div>
-      <button className='buttonheader'></button>  
+          <h1> Welcome To Garden Of Thoughts!</h1>
+          <p className='welcometext'>
+            Take a moment to explore inspiring quotes, edit your favorties, <br />
+            or add your own words of wisdom. <br />
+            Let your thoughts bloom here!
+          </p>
+        </div>
+        <button className='buttonheader'></button>  
       </header>
 
       <main className="box-global">
@@ -51,14 +56,17 @@ function App() {
           />
         </div>
 
+        <Animation />
+        <Moth /> 
+
         <img className="img-right" src={flowersLeft} alt="flowers background" />
       </main>
 
       <footer>
-      <div className="socials">
-          <img className='ig' src={instagram} alt="instragram" />
-           <img className='tik' src={tiktok} alt="tiktok" />
-           <img className='tw'src={tw} alt="x" />  
+        <div className="socials">
+          <img className='ig' src={instagram} alt="instagram" />
+          <img className='tik' src={tiktok} alt="tiktok" />
+          <img className='tw' src={tw} alt="x" />  
         </div>
       </footer>
     </div>

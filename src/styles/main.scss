@@ -197,10 +197,7 @@ header {
       }
 
     }
-
-    //Solucionar la versión responsive de la segunda card. 
   
-
     .box-global{
       margin: 0;
       padding: 0;
@@ -216,6 +213,20 @@ header {
         padding: px-to-rem(8);
         font-size: px-to-rem(10);
       }
+    }
+
+    .moth-container {
+      display: none;
+      top: auto;
+      bottom: 5vh;
+      right: 2vw;
+    }
+    
+    .moth {
+      width: 5px;
+    }
+    .moth2-container {
+      display: none;
     }
   }
   
