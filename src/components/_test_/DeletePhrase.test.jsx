@@ -1,40 +1,34 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { vi } from 'vitest';
-import DeletePhrase from '../deletePhrase/DeletePhrase';
+import { describe, it, expect, vi } from "vitest";
+import { render, screen, fireEvent } from "@testing-library/react";
+import DeletePhrase from "../deletePhrase/DeletePhrase";
 
-describe('DeletePhrase component', () => {
-  const mockOnDelete = vi.fn(); // <-- aqui
-  const phraseId = 123;
-
-  beforeEach(() => {
-    mockOnDelete.mockReset();
+describe("DeletePhrase", () => {
+  it("renders the delete button", () => {
+    render(<DeletePhrase id="1" onDelete={() => {}} />);
+    const deleteButton = screen.getByRole("button", { name: /delete phrase/i });
+    expect(deleteButton).toBeInTheDocument();
   });
 
-  it('renders the delete button', () => {
-    render(<DeletePhrase id={phraseId} onDelete={mockOnDelete} />);
-    const button = screen.getByRole('button', { name: /eliminar frase/i });
-    expect(button).toBeInTheDocument();
+  it("shows the modal when the delete button is clicked", () => {
+    render(<DeletePhrase id="1" onDelete={() => {}} />);
+    const deleteButton = screen.getByRole("button", { name: /delete phrase/i });
+    fireEvent.click(deleteButton);
+    expect(screen.getByText(/are you sure you want to delete this phrase/i)).toBeInTheDocument();
   });
 
-  it('calls onDelete if user confirms', () => {
-    window.confirm = vi.fn(() => true); // <-- aqui
-
-    render(<DeletePhrase id={phraseId} onDelete={mockOnDelete} />);
-    fireEvent.click(screen.getByRole('button'));
-
-    expect(window.confirm).toHaveBeenCalledWith('¿Eliminar esta frase?');
-    expect(mockOnDelete).toHaveBeenCalledWith(phraseId);
-    expect(mockOnDelete).toHaveBeenCalledTimes(1);
+  it("calls onDelete with the correct id when confirmed", () => {
+    const mockOnDelete = vi.fn();
+    render(<DeletePhrase id="1" onDelete={mockOnDelete} />);
+    fireEvent.click(screen.getByRole("button", { name: /delete phrase/i }));
+    fireEvent.click(screen.getByText("Yes"));
+    expect(mockOnDelete).toHaveBeenCalledWith("1");
   });
 
-  it('does not call onDelete if user cancels', () => {
-    window.confirm = vi.fn(() => false); // <-- aqui
-
-    render(<DeletePhrase id={phraseId} onDelete={mockOnDelete} />);
-    fireEvent.click(screen.getByRole('button'));
-
-    expect(window.confirm).toHaveBeenCalledWith('¿Eliminar esta frase?');
-    expect(mockOnDelete).not.toHaveBeenCalled();
+  it("closes the modal when clicking cancel", () => {
+    render(<DeletePhrase id="1" onDelete={() => {}} />);
+    fireEvent.click(screen.getByRole("button", { name: /delete phrase/i }));
+    fireEvent.click(screen.getByText("Cancel"));
+    expect(screen.queryByText(/are you sure you want to delete this phrase/i)).not.toBeInTheDocument();
   });
 });
 

@@ -23,6 +23,13 @@
   max-width: px-to-rem(300);
   width: 90%;
 
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: px-to-rem(10);
+    margin-top: px-to-rem(10);
+  }
+
   p {
     font-family: $font-primary;
     font-size: px-to-rem(16);
