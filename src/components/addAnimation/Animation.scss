@@ -22,3 +22,12 @@
     100% { transform: translateY(0) rotate(0deg); }
   }
   
+  @media (max-width: 768px) {
+  .moth-container {
+    display: none;   
+  }
+
+  .moth {
+    width: 45px;
+  }
+}

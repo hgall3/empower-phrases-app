@@ -1,0 +1,33 @@
+.bees-container {
+    position: fixed;
+    top: 25vh; 
+    left: 16vw;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .bees {
+    width: 80px;
+    animation: bees-fly 5s ease-in-out infinite;
+  }
+  
+  @keyframes bees-fly {
+    0%   { transform: translate(0px, 0px) rotate(0deg); }
+    25%  { transform: translate(-2px, -4px) rotate(1.5deg); }
+    50%  { transform: translate(2px, 2px) rotate(-1.5deg); }
+    75%  { transform: translate(-1px, -3px) rotate(1deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+  
+  @media (max-width: 768px) {
+    .bees-container {
+      top: auto;
+      bottom: 25vh;  // o ajústalo según se vea mejor
+      left: 25vw;
+    }
+  
+    .bees {
+      width: 50px;
+    }
+  }
+  
