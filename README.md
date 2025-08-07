@@ -1,100 +1,90 @@
-# 🚀 Empowering Phrases App
+# 🌱 Empowering Phrases App
 
-A simple and dynamic web application that allows users to create, read, update, and delete (CRUD) empowering phrases, each with its author. Built with React.js and designed using responsive and accessible principles.
+Welcome! This is a simple, responsive web app where you can create, read, update, and delete empowering phrases—each one tied to an author, and optionally, an image. It's built with **React.js** and follows the **Atomic Design** methodology to keep everything clean, scalable, and modular.
 
----
-
-## 👥 Team Members
-
-- [Montserrat Muñoz](https://github.com/Montc027)
-- [Paola Pulga](https://github.com/Pao-Pul)
-- [Daniella Pacheco](https://github.com/DaniPacheco8)
-- [Gabriela Gallegos](https://github.com/hgall3)
-- [Erika P. Montoya](https://github.com/DevErika)
+Whether you're a developer checking out the code or just curious to see how a collaborative CRUD app works, you're in the right place.
 
 ---
 
-## 🎯 Project Brief
+## ⚙️ Tech Stack
 
-Empowering Phrases is a collaborative project that showcases the ability to build a fully functional and responsive CRUD app using **React.js**, applying **Atomic Design** principles and component-based architecture.
+Here’s what we used to build this project:
 
-The app allows users to:
-- View a list of empowering phrases and their authors.
-- Add new phrases and authors.
-- Edit existing phrases or author names.
-- Delete phrases.
-- ⭐ Bonus: Add an image to the phrase (optional).
-
----
-
-## 🧑‍💻 Technologies Used
-
-- HTML5
-- CSS3 (with optional frameworks or preprocessors)
-- JavaScript (ES6+)
-- React.js (functional components + Hooks)
-
----
-
-## 🛠 Tools
-
-- Figma (UI/UX Design)
-- Visual Studio Code (Code Editor)
-- Git & GitHub (Version Control & Collaboration)
-- Trello (Project Planning)
-
----
-
-## 📱 Functional Requirements
-
-- ✅ Display all phrases with their corresponding author.
-- ✅ Allow editing of each phrase and/or author.
-- ✅ Allow deleting any phrase and its author.
-- ✅ Allow users to input a new phrase with an author.
-
----
-
-## 📋 Non-Functional Requirements
-
-- Each phrase **must** include the text and the author's name.
-- If the author is unknown, display as **Anonymous**.
-- The app must be **responsive** across devices (mobile-first).
-
----
-
-## 🧩 Methodology
-
-The project follows a **component-based architecture** using React and is divided into **two sprints**. Each sprint includes planning, development, review, and delivery phases.
-
-We use **Agile** principles with Trello boards for task tracking, daily follow-ups, and regular commits via GitHub.
-
----
-
-## 🧪 User Flow
-
-<!-- Add your flowchart or link to the image here once it's ready -->
-
----
-
-## 🔧 Atomic Design Structure
-
-The design was created in Figma following the **Atomic Design** methodology. All components are modular, reusable, and responsive, making the interface scalable and easy to maintain.
+* **React.js** (Functional Components + Hooks)
+* **JavaScript (ES6+)**
+* **HTML5 & CSS3**
+* **Sass (SCSS modules for styling)**
+* **Node.js + npm** (for environment and dependency management)
 
 ---
 
 ## 🧾 Getting Started
 
-Follow these steps to clone and run the project locally:
+If you'd like to run the app locally, just follow these steps:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/tu-usuario/empowering-phrases-app.git
+git clone https://github.com/your-username/empowering-phrases-app.git
 
-# 2. Navigate into the project folder
+# 2. Move into the project directory
 cd empowering-phrases-app
 
-# 3. Install dependencies
+# 3. Install the dependencies
 npm install
 
 # 4. Start the development server
 npm run dev
+```
+
+Now open [http://localhost:5173](http://localhost:5173) in your browser, and you're all set.
+
+---
+
+## 👥 The Team
+
+This app was built as a team by:
+
+* [Montserrat Muñoz](https://github.com/Montc027)
+* [Paola Pulga](https://github.com/Pao-Pul)
+* [Daniella Pacheco](https://github.com/DaniPacheco8)
+* [Gabriela Gallegos](https://github.com/hgall3)
+* [Erika P. Montoya](https://github.com/DevErika)
+
+---
+
+## 🧠 How It Works
+
+Here’s what users can do in the app:
+
+* ✅ View all the phrases and their authors
+* ✅ Add a new phrase and author
+* ✅ Edit any existing phrase or author name
+* ✅ Delete any phrase
+* ✅ Add an image URL (optional)
+
+
+## 📐 Project Structure & Design
+
+We followed a **component-based architecture** using **Atomic Design** principles: breaking down the UI into atoms, molecules, organisms, and so on.
+
+Our goal was to keep components **reusable**, **responsive**, and easy to maintain.
+
+---
+
+## 🗺️ Project Planning & Methodology
+
+We worked in two **sprints**, each with planning, development, and review phases.
+
+We used:
+
+* **Trello** to organize our tasks and keep track of progress
+* **Git & GitHub** for version control and collaboration
+* **Daily stand-ups** to communicate and adjust priorities
+* **Figma** for visual design and wireframes
+
+---
+
+## 🔍 Sneak Peek
+
+<!-- You can add a screenshot here or a link to a deployed version or design mockup -->
+
