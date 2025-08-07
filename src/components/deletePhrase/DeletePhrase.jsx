@@ -1,27 +1,41 @@
 import { useState } from "react";
 import "./DeletePhrase.scss";
 import trashIcon from "../../assets/trash.svg";
+import WarningDeleteModal from '../warningModal/WarningDeleteModal';
 
 function DeletePhrase({ id, onDelete }) {
-
-    const [showModal, setShowSuccessModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
-    setShowSuccessModal(true);
+    setShowModal(true);
   };
 
   const handleConfirm = () => {
     onDelete(id);
-    setShowSuccessModal(false);
+    setShowModal(false);
+  };
+
+  const handleClose = () => {
+    setShowModal(false);
   };
 
   return (
     <>
-      <button className="delete-phrase-btn" onClick={handleClick} aria-label="Eliminar frase">
-        <img src={trashIcon} alt="Eliminar" />
+      <button
+        className="delete-phrase-btn"
+        onClick={handleClick}
+        aria-label="Delete phrase"
+      >
+        <img src={trashIcon} alt="Delete" />
       </button>
-        {showModal && (
-        <WarningDeleteModal onClose={() => setShowSuccessModal(false) } handleConfirm= {handleConfirm}/>
+      {showModal && (
+        <WarningDeleteModal
+          onClose={handleClose}
+          handleConfirm={handleConfirm}
+          message="Are you sure you want to delete this phrase?"
+          confirmText="Yes"
+          cancelText="Cancel"
+        />
       )}
     </>
   );
