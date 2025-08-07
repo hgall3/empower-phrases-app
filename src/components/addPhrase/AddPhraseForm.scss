@@ -10,8 +10,13 @@
   gap: px-to-rem(12);
   padding: px-to-rem(20);
   background-color: $card-color;
-  border-radius: px-to-rem(20);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 
   textarea,
   input {
@@ -39,4 +44,11 @@
   color: white;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .add-phrase-form {
+    width: 90%;
+    padding: px-to-rem(16);
+  }
 }
