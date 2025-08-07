@@ -7,7 +7,7 @@ Welcome! This is a simple, responsive web app where you can create, read, update
 
 Here’s what the app looks like:
 
-![Screenshot of Empowering Phrases App](./src/assets/sneakpeek2.png)
+![Screenshot of Empowering Phrases App](./src/assets/sneakPeek2.png)
 
 ## 🧠 How It Works
 
