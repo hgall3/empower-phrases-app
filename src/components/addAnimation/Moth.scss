@@ -21,3 +21,15 @@
     100% { transform: translate(0px, 0px) rotate(0deg); }
   }
   
+  @media (max-width: 768px) {
+    .moth2-container {
+      top: auto;
+      bottom: 2vh; 
+      left: 65vw;    
+      
+    }
+  
+    .moth2 {
+      width: 45px;
+    }
+  }
