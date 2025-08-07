@@ -25,7 +25,7 @@ We used the following technologies to bring this project to life:
 - **HTML5 & CSS3**
 - **Sass** (SCSS modules for styling)
 - **Node.js** (Latest LTS version)
-- **Vitest** (for unit testing)
+- **Vitest 3.2.4** (for unit testing)
 
 ---
 
@@ -59,6 +59,3 @@ This app was built as a team by:
 
 
 ## 🔍 Sneak Peek
-
-
-
