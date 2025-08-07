@@ -76,3 +76,10 @@
   font-style: italic;
   font-family: $font-primary;
 }
+
+@media (max-width: 768px) {
+  .phrase-card {
+    width: 90%;
+    padding: px-to-rem(16);
+  }
+}
