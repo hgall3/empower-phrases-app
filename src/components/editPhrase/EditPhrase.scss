@@ -31,20 +31,21 @@
 
   .buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: row;
     gap: 0.40rem;
 
     button {
       display: flex;
       align-items: center;
+      justify-content: center;
       background: none;
       border: 1.8px solid black;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       font-family: $font-primary;
-      font-size: 0.80rem;
+      font-size: 1rem;
       color:  solid black;
       cursor: pointer;
       transition: none;
