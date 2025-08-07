@@ -58,4 +58,4 @@ This app was built as a team by:
 ---
 
 
-## 🔍 Sneak Peek
+## 🔍 Sneak Peek 
