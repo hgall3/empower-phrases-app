@@ -1,82 +1,73 @@
-# 🚀 Empowering Phrases App
+# 🌱 Empowering Phrases App
 
-A simple and dynamic web application that allows users to create, read, update, and delete (CRUD) empowering phrases, each with its author. Built with React.js and designed using responsive and accessible principles.
+Welcome! This is a simple, responsive web app where you can create, read, update, and delete empowering phrases, each one tied to an author and an image. It's built with **React.js 19** and follows the **UI Atomic Design** in Figma to keep everything modular and scalable.
+
+---
+## 🔍 Sneak Peek
+
+Here’s what the app looks like:
+
+![Screenshot of Empowering Phrases App](./src/assets/sneakPeek2.png)
+
+## 🧠 How It Works
+
+Here’s what users can do in the app:
+
+- ✅ View all the phrases and their authors  
+- ✅ Add a new phrase and author  
+- ✅ Edit any existing phrase or author name  
+- ✅ Delete any phrase  
+- ✅ Add an image URL (optional)
 
 ---
 
-## 👥 Team Members
+## ⚙️ Tech Stack
 
-- Montserrat Muñoz
-- Paola Pulga
-- Daniela Pacheco dos Santos
-- Gabriela Gallegos 
-- Erika P. Montoya
+We used the following technologies to bring this project to life:
 
----
-
-## 🎯 Project Brief
-
-Empowering Phrases is a collaborative project that showcases the ability to build a fully functional and responsive CRUD app using **React.js**, applying **Atomic Design** principles and component-based architecture.
-
-The app allows users to:
-- View a list of empowering phrases and their authors.
-- Add new phrases and authors.
-- Edit existing phrases or author names.
-- Delete phrases.
-- ⭐ Bonus: Add an image to the phrase (optional).
+- **React.js 19** (Functional Components + Hooks)
+- **JavaScript (ES6+)**
+- **HTML5 & CSS3**
+- **Sass** (SCSS modules for styling)
+- **Node.js v24** (Latest version)
+- **Vitest 3.2.4** (for unit testing)
 
 ---
 
-## 🧑‍💻 Technologies Used
+## 🧾 Getting Started
 
-- HTML5
-- CSS3 (with optional frameworks or preprocessors)
-- JavaScript (ES6+)
-- React.js (functional components + Hooks)
+To run the app locally, follow these steps:
 
----
+1. Clone the repository
 
-## 🛠 Tools
+    git clone https://github.com/hgall3/empower-phrases-app.git
 
-- Figma (UI/UX Design)
-- Visual Studio Code (Code Editor)
-- Git & GitHub (Version Control & Collaboration)
-- Trello (Project Planning)
+2. Move into the project directory
 
----
+    cd empowering-phrases-app
 
-## 📱 Functional Requirements
+3. Install dependencies
 
-- ✅ Display all phrases with their corresponding author.
-- ✅ Allow editing of each phrase and/or author.
-- ✅ Allow deleting any phrase and its author.
-- ✅ Allow users to input a new phrase with an author.
+    npm install
+
+4. Start the development server
+
+    npm run dev
 
 
----
+## 👥 The Team
 
-## 📋 Non-Functional Requirements
+This app was built as a team by:
 
-- Each phrase **must** include the text and the author's name.
-- If the author is unknown, display as **Anonymous**.
-- The app must be **responsive** across devices (mobile-first).
-
+* [Montserrat Muñoz](https://github.com/Montc027) → Developer
+* [Paola Pulga](https://github.com/Pao-Pul) → Product Owner
+* [Daniella Pacheco](https://github.com/DaniPacheco8) → Developer
+* [Gabriela Gallegos](https://github.com/hgall3) → Scrum Master & Developer
+* [Erika P. Montoya](https://github.com/DevErika) → Developer
 
 ---
 
-## 🧩 Methodology
 
-The project follows a **component-based architecture** using React and is divided into **two sprints**. Each sprint includes planning, development, review, and delivery phases.
 
-We use **Agile** principles with Trello boards for task tracking, daily follow-ups, and regular commits via GitHub.
 
----
-
-## 🧪 User Flow
-
-<!-- Add your flowchart or link to the image here once it's ready -->
-
----
-
-## 🔧 Atomic Design Structure
 

@@ -1,0 +1,55 @@
+@use "/src/styles/variables.scss" as *;
+
+.edit-form {
+  background: $card-color;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: none;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  input {
+    border: 1px solid $accent_brown;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-family: $font-primary;
+    font-size: 1rem;
+    color: $font-color;
+    outline: none;
+
+    &::placeholder {
+      font-style: italic;
+    }
+
+    &:focus {
+      border-color: $accent_brown;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 0.40rem;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: 1.8px solid black;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-family: $font-primary;
+      font-size: 1rem;
+      color:  solid black;
+      cursor: pointer;
+      transition: none;
+    }
+  }
+}
+
