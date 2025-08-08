@@ -10,7 +10,8 @@ import instagram from "./assets/instagram.svg"
 import tiktok from "./assets/tiktok.svg"
 import tw from "./assets/twitter.svg"
 import Animation from './components/addAnimation/Animation'
-import Moth from './components/addAnimation/Moth' 
+import Moth from './components/addAnimation/Moth'
+import Bees from './components/addAnimation/bees' 
 
 function App() {
   const [phrases, setPhrases] = useState(initialPhrases)
@@ -41,6 +42,7 @@ function App() {
       </header>
 
       <main className="box-global">
+        <Bees /> 
         <img className="img-left" src={flowersRight} alt="flowers background with moth" />
 
         <div className="phrases-container">
@@ -53,7 +55,7 @@ function App() {
         </div>
 
         <Animation />
-        <Moth /> 
+        <Moth />
 
         <img className="img-right" src={flowersLeft} alt="flowers background" />
       </main>
@@ -62,7 +64,7 @@ function App() {
         <div className="socials">
           <img className='ig' src={instagram} alt="instagram" />
           <img className='tik' src={tiktok} alt="tiktok" />
-          <img className='tw' src={tw} alt="x" />  
+          <img className='tw' src={tw} alt="x" />
         </div>
       </footer>
     </div>
